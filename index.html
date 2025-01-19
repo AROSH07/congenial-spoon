@@ -3,196 +3,435 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arosh Gaming Hub</title>
+    <title>AROHS'S ENGLISH BASIC KNOWLEDGE</title>
     <style>
+        /* Background image and page layout */
         body {
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPGt-IXVEgqURxsFelq716YhV2FOTwUmYa-A&s');
+            background-size: cover;
+            background-position: center;
+            color: #333;
         }
 
-        header {
+        /* Main title styling */
+        .main-title {
             text-align: center;
-            padding: 20px;
-            background-color: darkblue;
+            font-size: 48px;
+            color: transparent;
+            background-image: linear-gradient(to right, blue, red);
+            -webkit-background-clip: text;
+            background-clip: text;
+            margin-top: 50px;
         }
 
-        header h1 {
-            margin: 0;
-            color: white;
-            font-size: 2.5rem;
-            font-family: 'Courier New', Courier, monospace;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            letter-spacing: 2px;
-        }
-
-        .search-bar {
+        /* Subtitle styling */
+        .sub-title {
             text-align: center;
-            margin: 20px 0;
+            font-size: 32px;
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-top: 30px;
         }
 
-        .search-bar input[type="text"] {
-            padding: 10px;
-            width: 60%;
-            font-size: 1rem;
-        }
-
-        .search-bar button {
-            padding: 10px;
-            font-size: 1rem;
-            color: white;
-            background-color: red;
-            border: none;
-            cursor: pointer;
-        }
-
-        .game-section {
+        /* Option buttons styling */
+        .options {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
         }
 
-        .game {
-            background-color: #222;
-            border-radius: 10px;
-            width: 200px;
-            text-align: center;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .game img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .game h3 {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .game button {
-            padding: 10px;
-            font-size: 1rem;
-            color: white;
-            background-color: red;
-            border: none;
+        .option-btn {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 20px;
             cursor: pointer;
-            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .option-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Subscribe section styling */
+        .subscribe {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .subscribe a {
+            font-size: 24px;
+            color: transparent;
+            background-image: linear-gradient(to right, red, orange);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .subscribe a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content section styling */
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            color: transparent;
+            background-image: linear-gradient(to right, red, blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .content p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-top: 20px;
+            color: #fff;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1 class="main-title">AROHS'S ENGLISH BASIC KNOWLEDGE</h1>
+        <h2 class="sub-title">ENGLISH GRAMMER LIST</h2>
+        <div class="options">
+            <button class="option-btn" onclick="showContent('parts-of-speech')">Parts of Speech</button>
+            <button class="option-btn" onclick="showContent('modals')">Modals</button>
+            <button class="option-btn" onclick="showContent('tense')">Tense</button>
+            <button class="option-btn" onclick="showContent('voice')">Voice</button>
+            <button class="option-btn" onclick="showContent('narration')">Narration</button>
+            <button class="option-btn" onclick="showContent('sentence')">Sentence</button>
+            <button class="option-btn" onclick="showContent('gerund')">Gerund</button>
+            <button class="option-btn" onclick="showContent('finite-verb')">Finite Verb</button>
+            <button class="option-btn" onclick="showContent('non-finite-verb')">Non-Finite Verb</button>
+            <button class="option-btn" onclick="showContent('right-form-of-verb')">Right Form of Verb</button>
+            <button class="option-btn" onclick="showContent('article')">Article</button>
+        </div>
+        
+        <!-- Subscribe section -->
+        <div class="subscribe">
+            <p><a href="https://www.youtube.com/@TRACTR_XD" target="_blank">SUBSCRIBE FOR MORE</a></p>
+        </div>
 
-<header>
-    <h1>AROSH GAMING HUB</h1>
-</header>
-
-<div class="search-bar">
-    <input type="text" placeholder="Search for a game...">
-    <button>Search</button>
-</div>
-
-<div class="game-section">
-    <!-- Free Fire game section with download link -->
-    <div class="game">
-        <img src="https://i1.sndcdn.com/artworks-1fNo0tptQSdZl85i-y56KrQ-t1080x1080.jpg" alt="Free Fire">
-        <h3>Free Fire</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1LGtdVEti9XefUaampsor4u3dmM3Mbmjh" target="_blank">
-            <button>Download</button>
-        </a>
+        <!-- Content section -->
+        <div class="content" id="content-section">
+            <!-- Dynamic content will be inserted here -->
+        </div>
     </div>
 
-    <!-- Call of Duty game section with download link -->
-    <div class="game">
-        <img src="https://w7.pngwing.com/pngs/352/117/png-transparent-call-of-duty-black-ops-2-logo-call-of-duty-black-ops-iii-call-of-duty-4-modern-warfare-call-of-duty-video-game-call-of-duty-weapon-thumbnail.png" alt="Call of Duty">
-        <h3>Call of Duty</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1346fWCDmPQzobSI_dlMkvaRxYGOK2MWX" target="_blank">
-            <button>Download</button>
-        </a>
+    <script>
+        function showContent(section) {
+            let contentSection = document.getElementById('content-section');
+            let content = '';
+            
+            if (section === 'parts-of-speech') {
+                content = `
+                    <h2>PARTS OF SPEECH</h2>
+                    <p style="color: red;">1. <strong>Noun</strong><br>A noun is a person, place, thing, or idea.<br>Example: "Cat," "city," "happiness"</p>
+                    <p style="color: blue;">2. <strong>Pronoun</strong><br>A pronoun is a word that takes the place of a noun.<br>Example: "He," "she," "it," "they"</p>
+                    <p style="color: red;">3. <strong>Verb</strong><br>A verb expresses action or being.<br>Example: "Run," "is," "seem"</p>
+                    <p style="color: blue;">4. <strong>Adjective</strong><br>An adjective modifies or describes a noun.<br>Example: "Tall," "blue," "quick"</p>
+                    <p style="color: red;">5. <strong>Adverb</strong><br>An adverb modifies or describes a verb, adjective, or another adverb.<br>Example: "Quickly," "very," "loudly"</p>
+                    <p style="color: blue;">6. <strong>Preposition</strong><br>A preposition shows the relationship between a noun (or pronoun) and another word in the sentence.<br>Example: "In," "on," "under"</p>
+                    <p style="color: red;">7. <strong>Conjunction</strong><br>A conjunction connects words, phrases, or clauses.<br>Example: "And," "but," "or"</p>
+                    <p style="color: blue;">8. <strong>Interjection</strong><br>An interjection is a word or phrase that expresses emotion.<br>Example: "Wow," "oh no," "yay"</p>
+                `;
+            } else if (section === 'modals') {
+                content = `
+                    <h2>MODAL</h2>
+                    <p style="color: red;">1. <strong>Can / Could</strong><br>Can is used to express ability, permission, or possibility. Could is used for past ability or polite requests.</p>
+                    <p style="color: blue;">2. <strong>Will / Would</strong><br>Will is used to express future actions, promises, or willingness. Would is used for polite requests, hypothetical situations, or past habits.</p>
+                    <p style="color: red;">3. <strong>Shall / Should</strong><br>Shall is used for offers or formal suggestions. Should is used for advice or obligation.</p>
+                    <p style="color: blue;">4. <strong>May / Might</strong><br>May is used for permission or possibility. Might is used to express a weaker possibility.</p>
+                    <p style="color: red;">5. <strong>Must</strong><br>Must is used to express necessity, obligation, or certainty.</p>
+                    <p style="color: blue;">6. <strong>Ought to</strong><br>Ought to expresses duty, advice, or expectation.</p>
+                    <p style="color: red;">7. <strong>Need</strong><br>Need is used to express necessity or obligation, mostly in negative or question forms.</p>
+                    <p style="color: blue;">8. <strong>Dare</strong><br>Dare is used to express courage or challenge.</p>
+                    <p style="color: red;">9. <strong>Used to</strong><br>Used to describes past habits or situations that no longer exist.</p>
+                `;
+            } else if (section === 'right-form-of-verb') {
+                content = `
+                    <h2>RIGHT FORMS OF VERB</h2>
+                    <p><strong>Verbs</strong> change form depending on tense, aspect, mood, or voice. There are three main forms of a verb: <strong>Base Form</strong>, <strong>Past Form</strong>, and <strong>Past Participle</strong>.</p>
+                    <p><strong>Base Form</strong> (also called the infinitive) is the verb in its basic form without any endings.</p>
+                    <p>Example: <em>play, read, write</em></p>
+                    <p><strong>Past Form</strong> indicates an action that has already happened or is completed.</p>
+                    <p>Example: <em>played, read, wrote</em></p>
+                    <p><strong>Past Participle</strong> is used in perfect tenses and passive voice.</p>
+                    <p>Example: <em>played, read, written</em></p>
+
+                    <p><strong>Regular Verbs:</strong> These verbs follow a consistent pattern in their past and past participle forms by adding <em>-ed</em> to the base form.</p>
+                    <p>Example: <em>talk → talked, walk → walked</em></p>
+
+                    <p><strong>Irregular Verbs:</strong> These verbs do not follow the regular pattern and have unique past and past participle forms.</p>
+                    <p>Example: <em>go → went → gone, eat → ate → eaten</em></p>
+
+                    <p><strong>Use of Right Forms in Tenses:</strong></p>
+                    <ul>
+                        <li><strong>Present Tense:</strong> Use the base form or adds <em>-s</em> for third-person singular.<br>Example: "I play," "He plays"</li>
+                        <li><strong>Past Tense:</strong> Use the past form.<br>Example: "I played," "She watched"</li>
+                        <li><strong>Present Perfect:</strong> Use the past participle with "have" or "has."<br>Example: "I have played," "She has seen"</li>
+                        <li><strong>Past Perfect:</strong> Use the past participle with "had."<br>Example: "They had finished," "She had written"</li>
+                    </ul>
+                `;
+            } else if (section === 'voice') {
+                content = `
+                    <h2>VOICE</h2>
+                    <p>The voice of a verb tells whether the subject of the sentence performs the action or receives the action. There are two voices in English:</p>
+                    <p><strong>Active Voice:</strong> The subject of the sentence performs the action.<br>Example: "The dog bit the man."</p>
+                    <p><strong>Passive Voice:</strong> The subject of the sentence receives the action.<br>Example: "The man was bitten by the dog."</p>
+                `;
+            } else if (section === 'tense') {
+                content = `
+                    <h2>TENSE</h2>
+                    <p><strong>Tense</strong> refers to the time of action or state expressed by a verb. There are three main tenses in English: <strong>Present</strong>, <strong>Past</strong>, and <strong>Future</strong>.</p>
+
+                    <h3>Present Tense</h3>
+                    <p>The present tense is used to describe actions happening right now or regularly.</p>
+                    <ul>
+                        <li><strong>Simple Present:</strong> Describes habitual actions, general truths, or states.<br>Example: "I play soccer every day."</li>
+                        <li><strong>Present Continuous:</strong> Describes actions happening right now.<br>Example: "I am playing soccer right now."</li>
+                        <li><strong>Present Perfect:</strong> Describes actions that happened at an unspecified time or that started in the past and continue into the present.<br>Example: "I have played soccer."</li>
+                        <li><strong>Present Perfect Continuous:</strong> Describes actions that began in the past and are still continuing.<br>Example: "I have been playing soccer for two hours."</li>
+                    </ul>
+
+                    <h3>Past Tense</h3>
+                    <p>The past tense describes actions that have already happened.</p>
+                    <ul>
+                        <li><strong>Simple Past:</strong> Describes actions that occurred at a specific time in the past.<br>Example: "I played soccer yesterday."</li>
+                        <li><strong>Past Continuous:</strong> Describes actions that were happening at a specific time in the past.<br>Example: "I was playing soccer at 3 PM."</li>
+                        <li><strong>Past Perfect:</strong> Describes actions that were completed before another action in the past.<br>Example: "I had played soccer before it started raining."</li>
+                        <li><strong>Past Perfect Continuous:</strong> Describes actions that were ongoing until another action in the past.<br>Example: "I had been playing soccer for two hours when it started raining."</li>
+                    </ul>
+
+                    <h3>Future Tense</h3>
+                    <p>The future tense describes actions that will happen.</p>
+                    <ul>
+                        <li><strong>Simple Future:</strong> Describes actions that will happen at a specific time in the future.<br>Example: "I will play soccer tomorrow."</li>
+                        <li><strong>Future Continuous:</strong> Describes actions that will be happening at a specific time in the future.<br>Example: "I will be playing soccer at 3 PM tomorrow."</li>
+                        <li><strong>Future Perfect:</strong> Describes actions that will be completed before a specific time in the future.<br>Example: "I will have played soccer by 6 PM tomorrow."</li>
+                        <li><strong>Future Perfect Continuous:</strong> Describes actions that will be ongoing until a specific time in the future.<br>Example: "I will have been playing soccer for two hours by 6 PM tomorrow."</li>
+                    </ul>
+                `;
+            } else if (section === 'narration') {
+                content = `
+                    <h2>NARRATION</h2>
+                    <p>Narration is the process of reporting what someone has said. There are two main types of narration in English: <strong>Direct Speech</strong> and <strong>Indirect Speech</strong>.</p>
+                    <p><strong>Direct Speech:</strong> The exact words spoken by someone are quoted.<br>Example: He said, "I am going to the market."</p>
+                    <p><strong>Indirect Speech:</strong> The meaning of the words spoken by someone is reported without quoting exactly.<br>Example: He said that he was going to the market.</p>
+                `;
+            } else if (section === 'sentence') {
+                content = `
+                    <h2>SENTENCE</h2>
+                    <p>A sentence is a group of words that expresses a complete thought. There are four main types of sentences in English:</p>
+                    <ul>
+                        <li><strong>Declarative:</strong> A statement.<br>Example: "I like pizza."</li>
+                        <li><strong>Interrogative:</strong> A question.<br>Example: "Do you like pizza?"</li>
+                        <li><strong>Exclamatory:</strong> An exclamation.<br>Example: "What a beautiful day!"</li>
+                        <li><strong>Imperative:</strong> A command or request.<br>Example: "Please close the door."</li>
+                    </ul>
+                `;
+            } else if (section === 'gerund') {
+                content = `
+                    <h2>GERUND</h2>
+                    <p>A gerund is the -ing form of a verb that functions as a noun. It can be used as a subject, object, or complement in a sentence.</p>
+                    <p>Example: "Swimming is fun," "I enjoy reading," "She is good at drawing."</p>
+                `;
+            } else if (section === 'finite-verb') {
+                content = `
+                    <h2>FINITE VERB</h2>
+                    <p>A finite verb is a verb that is limited by a subject and tense. It agrees with the subject in number (singular/plural) and person (first, second, third).</p>
+                    <p>Example: "She writes," "I play," "They sing."</p>
+                `;
+            } else if (section === 'non-finite-verb') {
+                content = `
+                    <h2>NON-FINITE VERB</h2>
+                    <p>A non-finite verb is not limited by subject or tense. It is used in various verb forms such as infinitives, participles, or gerunds.</p>
+                    <p>Example: "To play," "Playing," "Written"</p>
+                `;
+            }
+
+            contentSection.innerHTML = content;
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Website</title>
+    <style>
+        /* Basic styles for the website */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .option-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #quiz-section {
+            display: none;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        #timer {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main content section with Grammar options -->
+        <h1>Welcome to the Grammar Learning Website</h1>
+        <button class="option-btn" onclick="startQuiz()">Start Grammar Quiz</button>
+        
+        <!-- Quiz section -->
+        <div id="quiz-section">
+            <h2 id="timer">Time Left: 50:00</h2>
+            <form id="quiz-form">
+                <!-- Questions will be populated here dynamically -->
+            </form>
+            <button onclick="submitQuiz()">Submit Quiz</button>
+        </div>
     </div>
 
-    <!-- PUBG game section with download link -->
-    <div class="game">
-        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/3951fd59953497.5a35bcf7c7650.jpg" alt="PUBG">
-        <h3>PUBG</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1YQqPN_dZUd-aOuKTDn25zJsqmS6F52Fd" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
+    <script>
+        let timer;
+        let timeLeft = 50 * 60; // 50 minutes in seconds
 
-    <!-- FC Mobile 25 game section with download link -->
-    <div class="game">
-        <img src="https://play-lh.googleusercontent.com/bplLsKrqRdbtxWJE-KKPY_nwAUJ_amQ1n4dHAUN7NsDDFI0Mqux8OT2oUrQzAAJmtwM" alt="FC Mobile 25">
-        <h3>FC Mobile 25</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1qR5WchqB1JRSuK2fGc3zIgtXTCCUeQRs" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
+        let quizData = [
+            {
+                question: "What is the plural of 'child'?",
+                options: ["Children", "Childs", "Childes", "Childer"],
+                answer: 0
+            },
+            {
+                question: "Choose the correct past form of 'go'.",
+                options: ["goed", "gone", "went", "goes"],
+                answer: 2
+            },
+            {
+                question: "What is the correct article: '___ apple is red.'",
+                options: ["A", "An", "The", "No article"],
+                answer: 1
+            },
+            {
+                question: "Choose the correct form of the verb: 'She ___ to the store every day.'",
+                options: ["goes", "gone", "going", "went"],
+                answer: 0
+            },
+            {
+                question: "Which of these is a gerund?",
+                options: ["running", "ran", "runs", "run"],
+                answer: 0
+            },
+            // Add 95 more questions similarly
+        ];
 
-    <!-- eFootball game section with download link -->
-    <div class="game">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF9IqcBNVtHemS27Zkocr7a9F5ahGUl4PG6rAajY3_dxSfGHHL-L09CfSBBrMlmUjiHnA&usqp=CAU" alt="eFootball">
-        <h3>eFootball</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1yG0bkxUURcudy3xXvHCPT16eUxHLY10Q" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
+        function startQuiz() {
+            // Hide the initial content and show the quiz section
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('quiz-section').style.display = 'block';
 
-    <!-- Dream Soccer game section with download link -->
-    <div class="game">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEeEPFPAMhqikUDEIlHuGuTBIVuO9uSqqRU_hWUCsxULFjnuRgLkg5ZlhDjoKzugZtN80&usqp=CAU" alt="Dream Soccer">
-        <h3>Dream Soccer</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1rx-fGiVTwswWwmE2caIhl-U-v8OnaTn_" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
+            // Start the timer
+            startTimer();
 
-    <!-- Soccer Star game section with download link -->
-    <div class="game">
-        <img src="https://play-lh.googleusercontent.com/3dApu3S9wAW2jTHczXw079ySDY6rIHKLQIZXjcVxxV_WbGJKnSjTkMBm00IfzaZfO5Gw" alt="Soccer Star">
-        <h3>Soccer Star</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1HZHnWeT0oaLmlej99Ef5-jIIfbObiejS" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
+            // Load the quiz questions
+            loadQuestions();
+        }
 
-    <!-- Hill Climb Racing game section with download link -->
-    <div class="game">
-        <img src="https://i.pinimg.com/474x/b6/5e/2c/b65e2c130062096dd7204c8a26bde3a6.jpg" alt="Hill Climb Racing">
-        <h3>Hill Climb Racing</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1q3BxVSnzfRP63LsoLvCbmIRpPHshiSRV" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
+        function startTimer() {
+            timer = setInterval(function() {
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    submitQuiz(); // Automatically submit quiz when time is up
+                } else {
+                    timeLeft--;
+                    let minutes = Math.floor(timeLeft / 60);
+                    let seconds = timeLeft % 60;
+                    document.getElementById('timer').textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+                }
+            }, 1000);
+        }
 
-    <!-- Minecraft game section with updated download link -->
-    <div class="game">
-        <img src="https://preview.redd.it/minecraft-logo-v0-ak9w918zi5r81.png?auto=webp&s=614e5180aa1f7068676a06351c8edffc86b3b58a" alt="Minecraft">
-        <h3>Minecraft</h3>
-        <a href="https://drive.google.com/uc?export=download&id=1xxEp9G4e-w1dysoXFsYGbasqt5u24Yzo" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
+        function loadQuestions() {
+            const quizForm = document.getElementById('quiz-form');
+            quizData.forEach((item, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.classList.add('question');
 
-    <!-- Other game sections remain unchanged -->
-    <div class="game">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg" alt="Netflix">
-        <h3>Netflix</h3>
-        <a href="https://drive.google.com/uc?export=download&id=YOUR_NETFLIX_APK_FILE_ID" target="_blank">
-            <button>Download</button>
-        </a>
-    </div>
-</div>
+                const questionText = document.createElement('h3');
+                questionText.textContent = item.question;
+                questionDiv.appendChild(questionText);
 
-<script>
-    // The JavaScript section could handle search functionality in the future
-</script>
+                item.options.forEach((option, i) => {
+                    const optionLabel = document.createElement('label');
+                    optionLabel.textContent = option;
 
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = 'question' + index;
+                    input.value = i;
+
+                    questionDiv.appendChild(input);
+                    questionDiv.appendChild(optionLabel);
+                    questionDiv.appendChild(document.createElement('br'));
+                });
+
+                quizForm.appendChild(questionDiv);
+            });
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            const quizForm = document.getElementById('quiz-form');
+
+            quizData.forEach((item, index) => {
+                const selectedAnswer = quizForm.querySelector('input[name="question' + index + '"]:checked');
+                if (selectedAnswer && parseInt(selectedAnswer.value) === item.answer) {
+                    score++;
+                }
+            });
+
+            alert(`Your score: ${score} out of ${quizData.length}`);
+            // Show the main content again after quiz is finished
+            document.getElementById('quiz-section').style.display = 'none';
+            document.querySelector('.container').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
